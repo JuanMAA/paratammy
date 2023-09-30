@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.2.6",
+    "antd": "^5.9.4",
+    "next": "latest",
     "react": "latest",
-    "react-dom": "latest",
-    "next": "latest"
+    "react-dom": "latest"
   },
   "devDependencies": {
     "typescript": "latest",
