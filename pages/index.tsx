@@ -95,29 +95,6 @@ export default function Home() {
     }
   };
 
-  const saveUser = async (form: any) => {
-    fetch('/api/createUser', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(form),
-    })
-      .then((_) => {
-        messageApi.open({
-          type: 'success',
-          content: 'Usuario creado correctamente !!',
-        });
-      })
-      .catch((error) => {
-        messageApi.open({
-          type: 'error',
-          content: error,
-        });
-      });
-      getUsers()
-  };
-
   const {
     token: { colorBgContainer },
   } = theme.useToken();
@@ -147,7 +124,7 @@ export default function Home() {
             <Table columns={columns} dataSource={list} scroll={{ x: 1300 }} />
           </div>
         </Content>
-        <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Ant UED</Footer>
+        <Footer style={{ textAlign: 'center' }}></Footer>
       </Layout>
     </Layout>
   )
